@@ -2,7 +2,7 @@
  <img height=350px src="./simulation-output.png" alt="Simulation output">
 </p>
 
-<h1 align="center">Basic Traffic Intersection Simulation</h1>
+<h1 align="center">Dynamic Traffic Managament Using RL</h1>
 
 <div align="center">
 
@@ -28,22 +28,3 @@ Find a step-by-step guide to build this simulation [here](https://towardsdatasci
 ### Prerequisites
 
 [Python 3.1+](https://www.python.org/downloads/)
-
-------------------------------------------
-### Installation
-
- * Step I: Clone the Repository
-```sh
-      $ git clone https://github.com/mihir-m-gandhi/Basic-Traffic-Intersection-Simulation
-```
-  * Step II: Install the required packages
-```sh
-      # On the terminal, move into Basic-Traffic-Intersection-Simulation directory
-      $ cd Basic-Traffic-Intersection-Simulation
-      $ pip install pygame
-```
-* Step III: Run the code
-```sh
-      # To run simulation
-      $ python simulation.py
-```
