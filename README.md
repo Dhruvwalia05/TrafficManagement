@@ -24,15 +24,7 @@
 Find a step-by-step guide to build this simulation [here](https://towardsdatascience.com/traffic-intersection-simulation-using-pygame-689d6bd7687a).
 
 ------------------------------------------
-### Demo
 
-The video below shows the final output of the simulation.
-
-<p align="center">
-    <img src="./Demo.gif">
-</p>
-
-------------------------------------------
 ### Prerequisites
 
 [Python 3.1+](https://www.python.org/downloads/)
@@ -55,12 +47,3 @@ The video below shows the final output of the simulation.
       # To run simulation
       $ python simulation.py
 ```
-
-------------------------------------------
-### Author
-
-Mihir Gandhi - [mihir-m-gandhi](https://github.com/mihir-m-gandhi)
-
-------------------------------------------
-### License
-This project is licensed under the MIT - see the [LICENSE](./LICENSE) file for details.
