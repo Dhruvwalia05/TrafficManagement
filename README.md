@@ -1,30 +1,39 @@
-<p align="center">
- <img height=350px src="./simulation-output.png" alt="Simulation output">
-</p>
-
-<h1 align="center">Dynamic Traffic Managament Using RL</h1>
+<h1 align="center">🚦 Traffic Light Control System Using Reinforcement Learning</h1>
 
 <div align="center">
 
 [![Python version](https://img.shields.io/badge/python-3.1+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-
-<h4>A simulation developed from scratch using Pygame to simulate the movement of vehicles across a traffic intersection having traffic lights with a timer.</h4>
 
 </div>
 
------------------------------------------
-### Description
+-------------------------------------
 
-* It contains a 4-way traffic intersection with traffic signals controlling the flow of traffic in each direction. 
-* Each signal has a timer on top of it which shows the time remaining for the signal to switch from green to yellow, yellow to red, or red to green. 
-* Vehicles such as cars, bikes, buses, and trucks are generated, and their movement is controlled according to the signals and the vehicles around them. 
-* This simulation can be further used for data analysis or to visualize AI or ML applications. 
+<h3>Description</h3>
+This project implements a simulation of an intersection with four traffic lanes (north, east, south, and west) using Reinforcement Learning (RL) to optimize traffic light management. The goal is to minimize vehicle wait times and improve traffic flow efficiency by dynamically adjusting the green light durations based on real-time traffic conditions.
 
-Find a step-by-step guide to build this simulation [here](https://towardsdatascience.com/traffic-intersection-simulation-using-pygame-689d6bd7687a).
+-------------------------------------
 
-------------------------------------------
+<h3>Key Features</h3>
+<b>Reinforcement Learning-Based Control:</b> The system uses an RL agent to decide which lane should get the green light based on the current traffic conditions.
+<b>Dynamic Traffic Simulation:</b> Random vehicle generation simulates real-world traffic flow, with distinct vehicle densities for peak and off-peak hours.
+<b>Customizable Environment:</b> The intersection can handle different traffic loads with parameters such as green light duration, vehicle cross time, and max allowed waiting time for vehicles.
+<b>Four-Lane Intersection:</b> Traffic is managed for four lanes—north, east, south, and west—each of which can have its own independent vehicle count and traffic light state.
+<b>Flexible Reward System:</b> The reward mechanism incentivizes efficient traffic flow by providing positive rewards for clearing traffic within the allowed time and penalizing delays.
 
-### Prerequisites
+-------------------------------------
 
-[Python 3.1+](https://www.python.org/downloads/)
+<h3>Environment Details</h3>
+<b>Action Space: </b>Discrete action space representing the 4 lanes, with the agent choosing which lane gets the green light.
+<b>Observation Space: </b>The current state is represented by the number of vehicles waiting in each lane.
+<b>Vehicle Cross Time: </b>The time it takes for each vehicle to pass through the intersection (configurable, default is 3 seconds per vehicle).
+<b>Green Light Duration: </b>The default green light duration is 10 seconds, but it adapts dynamically based on the traffic load.
+<b>Peak/Off-Peak Simulation: </b>Randomized vehicle generation simulates varying traffic density based on time of day, accounting for morning and evening rush hours.
+<b>Max Steps Per Episode:</b> Each episode has a limit of 100 steps, with penalties applied if this limit is reached without efficient traffic management.
+
+-------------------------------------
+
+<h3>Simulation Workflow</h3>
+<b>Vehicle Generation:</b> Random vehicles are generated for each lane based on the time of day (peak or off-peak hours).
+<b>Traffic Light Management:</b> The RL agent observes the traffic situation and chooses which lane receives the green light to optimize vehicle flow.
+<b>Reward Calculation:</b> Positive rewards are given for clearing vehicles efficiently, while negative rewards are applied for traffic delays or inefficiencies.
+<b>Step and Episode Tracking:</b> Each episode progresses until the maximum number of steps is reached or all lanes are cleared of vehicles.
